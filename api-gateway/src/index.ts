@@ -23,6 +23,6 @@ app.use("*", (_, res) => {
   return res.status(404).json({ message: "Route not found" });
 });
 
-server.listen(5000, () => {
+server.listen(process.env.API_GATEWAY || 5000, () => {
   console.log("API gate way is ready:5000");
 });
